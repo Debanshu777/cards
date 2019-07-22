@@ -41,7 +41,7 @@ func (d deck) saveToFile(fileName string) error {
 func newDeckFromFile(fileName string) deck {
 	bs, error := ioutil.ReadFile(fileName)
 	if error != nil {
-		fmt.Println("Error hain bhaisahab : ", error)
+		fmt.Println("Error: ", error)
 		os.Exit(1)
 	}
 	s := strings.Split(string(bs), ",")
